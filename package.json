@@ -9,16 +9,26 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
-  "main": "./out/extension.js",
   "contributes": {
-    "commands": [
-      {
-        "command": "scroll-precentage.helloWorld",
-        "title": "Hello World"
-      }
-    ]
+    "configuration": {
+        "properties": {
+            "scroll-precentage.cursor": {
+                "description": "Based on what should the precentage be calculated",
+                "type": "string",
+                "default": "scrollbar",
+                "enum": ["scrollbar", "cursor"],
+                "enumDescriptions": [
+                  "Precentage will be calculated based on the end of the scrollbar",
+                  "Precentage will be calculated based on the position of the cursor"
+                ]
+            }
+        }
+    }
   },
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
   "scripts": {
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
