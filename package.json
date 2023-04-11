@@ -29,6 +29,7 @@
     "onStartupFinished"
   ],
   "repository": "https://github.com/IdanRudich/vscode-scroll-precentage",
+  "publisher": "IdanRudich",
   "main": "./out/extension.js",
   "scripts": {
     "vscode:prepublish": "npm run compile",
