@@ -1,8 +1,8 @@
 {
-  "name": "scroll-precentage",
-  "displayName": "scroll-precentage",
-  "description": "Shows the precentage scrolled in a file",
-  "version": "0.0.1",
+  "name": "scroll-percentage",
+  "displayName": "scroll-percentage",
+  "description": "Shows the percentage scrolled in a file",
+  "version": "1.0.0",
   "engines": {
     "vscode": "^1.77.0"
   },
@@ -12,14 +12,14 @@
   "contributes": {
     "configuration": {
         "properties": {
-            "scroll-precentage.cursor": {
-                "description": "Based on what should the precentage be calculated",
+            "scroll-percentage.cursor": {
+                "description": "Based on what should the percentage be calculated",
                 "type": "string",
                 "default": "scrollbar",
                 "enum": ["scrollbar", "cursor"],
                 "enumDescriptions": [
-                  "Precentage will be calculated based on the end of the scrollbar",
-                  "Precentage will be calculated based on the position of the cursor"
+                  "Percentage will be calculated based on the end of the scrollbar",
+                  "Percentage will be calculated based on the position of the cursor"
                 ]
             }
         }

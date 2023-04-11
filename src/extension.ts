@@ -6,7 +6,7 @@ export function activate({ subscriptions }: vscode.ExtensionContext) {
 
 	// register a command that is invoked when the status bar
 	// item is selected
-	const myCommandId = 'scroll-precentage.showSelectionCount';
+	const myCommandId = 'scroll-percentage.showSelectionCount';
 	subscriptions.push(vscode.commands.registerCommand(myCommandId, () => {
 		//const n = vscode.window.activeTextEditor?.visibleRanges[0].start.line;
 		//vscode.window.showInformationMessage(`Yeah, ${n} line(s) selected... Keep going!`);
@@ -19,19 +19,19 @@ export function activate({ subscriptions }: vscode.ExtensionContext) {
 
 	// register some listener that make sure the status bar 
 	// item always up-to-date
-	subscriptions.push(vscode.window.onDidChangeActiveTextEditor(getPrecentage)); // listen for chaged file/tab
-    subscriptions.push(vscode.window.onDidChangeTextEditorVisibleRanges(getPrecentage)); // listen for scroll action
-    subscriptions.push(vscode.window.onDidChangeTextEditorSelection(getPrecentage)); // listen for cursor change
+	subscriptions.push(vscode.window.onDidChangeActiveTextEditor(getPercentage)); // listen for chaged file/tab
+    subscriptions.push(vscode.window.onDidChangeTextEditorVisibleRanges(getPercentage)); // listen for scroll action
+    subscriptions.push(vscode.window.onDidChangeTextEditorSelection(getPercentage)); // listen for cursor change
 
 
 	// update status bar item once at start
-	getPrecentage();
+	getPercentage();
 }
 
-function getPrecentage(): void {
+function getPercentage(): void {
     // get config
     const config = vscode.workspace.getConfiguration();
-    const cursorType = config.get<"cursor" | "scrollbar">('scroll-precentage.cursor', 'scrollbar');
+    const cursorType = config.get<"cursor" | "scrollbar">('scroll-percentage.cursor', 'scrollbar');
     if (vscode.window.activeTextEditor === undefined) {
         // should not be possible
         return;
