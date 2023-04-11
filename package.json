@@ -28,6 +28,7 @@
   "activationEvents": [
     "onStartupFinished"
   ],
+  "repository": "https://github.com/IdanRudich/vscode-scroll-precentage",
   "main": "./out/extension.js",
   "scripts": {
     "vscode:prepublish": "npm run compile",
