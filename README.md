@@ -20,3 +20,6 @@ Users appreciate release notes as you update your extension.
 
 Initial release of scroll-percentage!
 
+### 1.0.1
+
+Removed "-" from name so it may be searched with ease
