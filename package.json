@@ -1,6 +1,6 @@
 {
   "name": "scroll-percentage",
-  "displayName": "scroll-percentage",
+  "displayName": "scroll percentage",
   "description": "Shows the percentage scrolled in a file",
   "version": "1.0.0",
   "engines": {
